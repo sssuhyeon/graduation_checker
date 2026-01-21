@@ -5,9 +5,18 @@
     <title>sidepanel</title>
 </head>
 <body>
-    <h1>수강 과목 조회</h1>
-    <button id="scrape-btn">조회</button>
-    <div id="data-list"></div>
+    <h1>학점 계산기</h1>
+    <button id="calc-btn">조회</button>
+    <div>
+        <h4>요약 정보</h4>
+        <p>
+            총 취득 학점: <strong id="total-credits">0</strong>
+        </p>
+    </div>
+    <h3>내 수강 과목 리스트</h3>
+    <div id="course-list">
+        <p>ndrims에서 성적 조회를 하면<br>여기에 과목이 표시됩니다.</p>
+    </div>
     <script src="sidepanel.js"></script>
 </body>
 </html>

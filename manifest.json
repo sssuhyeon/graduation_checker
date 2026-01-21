@@ -3,7 +3,16 @@
     "version": "1.0",
     "description": "졸업 가능 여부를 판정합니다.",
     "manifest_version": 3,
-    "permissions": ["sidePanel", "storage", "tabs"],
+    "permissions": [
+        "sidePanel", 
+        "storage", 
+        "tabs",
+        "scripting",
+        "activeTab"
+    ],
+    "side_panel": {
+        "default_path": "sidepanel.html"
+    },
     "host_permissions": [
         "https://ndrims.dongguk.edu/*"
     ],
@@ -12,6 +21,18 @@
     },
     "action": {
         "default_title": "Click to open panel"
-    }
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://ndrims.dongguk.edu/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["injected_script.js"],
+            "matches": ["https://ndrims.dongguk.edu/*"]
+        }
+    ] 
     
 }
