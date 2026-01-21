@@ -1,0 +1,20 @@
+{
+    "name": "졸업 사정 시뮬레이터",
+    "version": "1.0",
+    "description": "졸업 가능 여부를 판정합니다.",
+    "manifest_version": 3,
+    "permissions": ["sidePanel", "storage", "tabs"],
+    "host_permissions": [
+        "https://ndrims.dongguk.edu/*"
+    ],
+    "background": {
+        "service_worker": "service-worker.js"
+    },
+    "side_panel": {
+        "default_path": "sidepanel.html"
+    },
+    "action": {
+        "default_title": "Click to open panel"
+    }
+    
+}
