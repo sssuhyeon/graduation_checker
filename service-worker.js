@@ -4,10 +4,10 @@ const NDRIMS_ORIGIN = 'https://ndrims.dongguk.edu';
 // 확장프로그램 아이콘 클릭 시 사이드바가 열림
 chrome.sidePanel
   .setPanelBehavior({ openPanelOnActionClick: true })
-  .catch((error) => console.error(error));
+  .catch((error) => console.error("sidepanel 설정 오류: ", error));
 
 // ndrims에서만 사용 가능하도록 설정
-chrome.tabs.onUpdated.addListener(async (tabId, info, tab) => {
+chrome.tabs.onUpdated.addListener(async (tabId, tab) => {
     if (!tab.url) return;
 
     const url = new URL(tab.url);
